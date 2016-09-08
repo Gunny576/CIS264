@@ -1,20 +1,20 @@
 ﻿@model WebApplication1.Models.TestData
 
 @{
-    ViewBag.Title = "TestLink";
+    ViewBag.Title = "querry";
     Layout = null;
 }
 <!doctype html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>TestLink</title>
+    <title>Querry Interface</title>
 </head>
 <body>
     <div>
         @using (Html.BeginForm())
             {
-            <p>This is a test qurry with a date limit. dates range from 1/1/16 to 4/1/16 enter a High and low</p>
+            <p>This is a test querry with a date limit. dates range from 1/1/16 to 4/1/16 enter a Low bound then a High bound</p>
             <p> Low: @Html.TextBoxFor(x => x.Name)</p>
             <p> High: @Html.TextBoxFor(x => x.Email)</p>
 
@@ -24,7 +24,7 @@
                  new SelectListItem() { Text = "no, you can't email me", Value = bool.FalseString }
                  }, "Choose an option")
                 </p>
-                <input type="submit" value="Submit form" />
+                <input type="submit" value="Submit Querry" />
         }
 
     </div>
