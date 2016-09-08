@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
+        //Test for Visual studio
     {
         public string connStr = "server=24.124.62.140;user=Cis264;database=test;port=3306;password=P@ssword;";
         
