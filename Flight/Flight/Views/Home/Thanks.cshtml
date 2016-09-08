@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.TestData
+
+@{
+    ViewBag.Title = "TestLink";
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestLink</title>
+</head>
+<body>
+    <p>
+        You entered, @Model.Name, @Model.Email
+        The Transactions entered between those dates are as follows:
+        </p>
+    <ul id="colors">
+
+        @foreach (var colors in (List<string>)@ViewBag.date_data)
+        {
+            <li>
+                @colors
+            </li>
+        }
+
+    </ul>
+
+</body>
+</html>
