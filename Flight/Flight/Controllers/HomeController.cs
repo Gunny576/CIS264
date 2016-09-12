@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             {
                 conn.Open();
                 //sql command for warning flag data
-                string sql = "SELECT idTransaction, dateOfError, ErrorName FROM `warning_flags` where handled = '0'";
+                string sql = "SELECT idTransaction, dateOfError, ErrorName FROM `warning_flags` where handled = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 //data we take from the database is stored here

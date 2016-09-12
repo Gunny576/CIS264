@@ -9,23 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Querry Interface</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
 </head>
 <body>
+    <header>
+    </header>
     <div>
         @using (Html.BeginForm())
             {
-            <p>This is a test querry with a date limit. dates range from 1/1/16 to 4/1/16 enter a Low bound then a High bound</p>
-            <p> Low: @Html.TextBoxFor(x => x.Name)</p>
-            <p> High: @Html.TextBoxFor(x => x.Email)</p>
-
-                 <p> Garbage dropdown for testing
-                 @Html.DropDownListFor(x => x.canEmail, new[] {
-                 new SelectListItem() { Text = "yes, you can Email me", Value = bool.TrueString },
-                 new SelectListItem() { Text = "no, you can't email me", Value = bool.FalseString }
-                 }, "Choose an option")
-                </p>
+                <p>This is a test querry with a date limit. dates range from 1/1/16 to 4/1/16 enter a Low bound then a High bound</p>
+                <p> Low: @Html.TextBoxFor(x => x.Name)</p>
+                <p> High: @Html.TextBoxFor(x => x.Email)</p>
                 <input type="submit" value="Submit Querry" />
-        }
+            }
 
     </div>
 </body>
