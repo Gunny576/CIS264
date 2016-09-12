@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             {
                 conn.Open();
                 //sql command for warning flag data
-                string sql = "SELECT * FROM `warning_flags` where handled = '0'";
+                string sql = "SELECT idTransaction, dateOfError, ErrorName FROM `warning_flags` where handled = '0'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 //data we take from the database is stored here
@@ -32,7 +32,7 @@ namespace WebApplication1.Controllers
                 //and visual studio crashes
                 while (rdr.Read())
                 {
-                    data.Add(rdr[0] + " -- " + rdr[1] + " -- " + rdr[2] + " -- " + rdr[3]);
+                    data.Add(rdr[0] + " -- " + rdr[1] + " -- " + rdr[2]);
                     Console.WriteLine(rdr[0] + " -- " + rdr[1]);
                 }
                 //pass that data to the view for output
