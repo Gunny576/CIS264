@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
+</head>
+<body>
+    <p>
+        <ul id="colors">
+
+            @foreach (var colors in (List<string>)ViewBag.data)
+            {
+                <li>
+                    @colors
+                </li>
+            }
+
+        </ul>
+    </p>
+    
+    @Html.ActionLink("Open Qurry interface", "querry")
+    @Html.ActionLink("Open Trigger interface", "trigger")
+</body>
+</html>
